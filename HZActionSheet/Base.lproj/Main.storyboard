@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1V-mo-sDY">
+                                <rect key="frame" x="285" y="315" width="30" height="30"/>
+                                <state key="normal" title="红色">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redSheetAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sdG-A9-8M3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz6-iM-mHc">
+                                <rect key="frame" x="285" y="225" width="30" height="30"/>
+                                <state key="normal" title="多行">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="multiLineSheetAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HKC-qj-bTL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwj-Ty-cbe">
+                                <rect key="frame" x="278" y="405" width="45" height="30"/>
+                                <state key="normal" title="无标题">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="noTitleSheetAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BD2-F9-IEG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jl9-mX-peA">
+                                <rect key="frame" x="285" y="135" width="30" height="30"/>
+                                <state key="normal" title="普通">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="normalSheetAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Fg-Ij-ayd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tz6-iM-mHc" firstAttribute="top" secondItem="jl9-mX-peA" secondAttribute="bottom" constant="60" id="0Ov-Ot-1uM"/>
+                            <constraint firstAttribute="centerX" secondItem="lwj-Ty-cbe" secondAttribute="centerX" id="7YZ-G5-ooe"/>
+                            <constraint firstItem="h1V-mo-sDY" firstAttribute="top" secondItem="Tz6-iM-mHc" secondAttribute="bottom" constant="60" id="ExX-Tu-kls"/>
+                            <constraint firstAttribute="centerX" secondItem="jl9-mX-peA" secondAttribute="centerX" id="GYH-1m-Pea"/>
+                            <constraint firstItem="lwj-Ty-cbe" firstAttribute="top" secondItem="h1V-mo-sDY" secondAttribute="bottom" constant="60" id="d01-nG-TWd"/>
+                            <constraint firstAttribute="centerY" secondItem="h1V-mo-sDY" secondAttribute="centerY" constant="-30" id="fNL-nh-pTU"/>
+                            <constraint firstAttribute="centerX" secondItem="Tz6-iM-mHc" secondAttribute="centerX" id="lIZ-E0-DgZ"/>
+                            <constraint firstAttribute="centerY" secondItem="Tz6-iM-mHc" secondAttribute="centerY" constant="30" id="lOs-CL-Bn2"/>
+                            <constraint firstAttribute="centerX" secondItem="h1V-mo-sDY" secondAttribute="centerX" id="oEi-1X-Hi4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lOs-CL-Bn2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -19,6 +19,7 @@
 @interface HZActionSheet : UIControl
 @property (nonatomic, weak) id<HZActionSheetDelegate> delegate;
 @property (nonatomic, assign, readonly) NSInteger cancelButtonIndex;
+@property (nonatomic, strong) UIColor *titleColor;
 
 - (instancetype)initWithTitle:(NSString *)title delegate:(id<HZActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonIndexSet:(NSIndexSet *)destructiveIndexSet otherButtonTitles:(NSArray *)otherButtonTitles;
 - (void)showInView:(UIView *)superView;

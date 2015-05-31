@@ -9,9 +9,10 @@
 #import "HZActionSheet.h"
 #import "Masonry.h"
 
-const CGFloat kHZCellHeight = 44.f;
+const CGFloat kHZCellHeight = 50.f;
 const CGFloat kHZSeparatorHeight = 5.f;
 const CGFloat kHZAnimationDuration = .2f;
+const CGFloat kHZFontSize = 18.f;
 
 @interface HZActionSheet () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -29,7 +30,6 @@ const CGFloat kHZAnimationDuration = .2f;
 @end
 
 @implementation HZActionSheet
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -55,10 +55,12 @@ const CGFloat kHZAnimationDuration = .2f;
 
 
 - (void)setup
-{   
+{
+    _titleColor = [UIColor blackColor];
+    
     [self addTarget:self action:@selector(hideActionSheet) forControlEvents:UIControlEventTouchUpInside];
     
-    self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7f];
+    self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
     
     _sheetView = [[UIView alloc] init];
     _sheetView.backgroundColor = [UIColor clearColor];
@@ -69,14 +71,15 @@ const CGFloat kHZAnimationDuration = .2f;
     _tableView.delegate = self;
     _tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15);
     _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.rowHeight = kHZCellHeight;
     
     _cancleButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _cancleButton.backgroundColor = [UIColor whiteColor];
     [_cancleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:_cancleTitle
                                                                           attributes:@{
-                                                                                       NSFontAttributeName: [UIFont boldSystemFontOfSize:15.f],
-                                                                                       NSForegroundColorAttributeName: [UIColor blackColor],
+                                                                                       NSFontAttributeName: [UIFont systemFontOfSize:kHZFontSize],
+                                                                                       NSForegroundColorAttributeName: _titleColor,
                                                                                        }];
     [_cancleButton setAttributedTitle:attributedTitle forState:UIControlStateNormal];
     [_cancleButton addTarget:self action:@selector(cancelButtonClicked) forControlEvents:UIControlEventTouchUpInside];
@@ -178,6 +181,21 @@ const CGFloat kHZAnimationDuration = .2f;
     }
 }
 
+
+- (void)setTitleColor:(UIColor *)titleColor
+{
+    if (_titleColor != titleColor) {
+        _titleColor = titleColor;
+        [_tableView reloadData];
+        NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:_cancleTitle
+                                                                              attributes:@{
+                                                                                           NSFontAttributeName: [UIFont systemFontOfSize:kHZFontSize],
+                                                                                           NSForegroundColorAttributeName: _titleColor,
+                                                                                           }];
+        [_cancleButton setAttributedTitle:attributedTitle forState:UIControlStateNormal];
+    }
+}
+
 #pragma mark - TableView DataSource & Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -194,13 +212,13 @@ const CGFloat kHZAnimationDuration = .2f;
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.textLabel.text = _otherTitles[indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:15.f];
+    cell.textLabel.font = [UIFont systemFontOfSize:kHZFontSize];
     
     if ([_destructiveIndexSet containsIndex:indexPath.row]) {
         cell.textLabel.textColor = [UIColor redColor];
     }
     else {
-        cell.textLabel.textColor = [UIColor blackColor];
+        cell.textLabel.textColor = self.titleColor;
     }
     return cell;
 }

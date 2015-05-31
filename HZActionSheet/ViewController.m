@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger, HZActionSheetTag) {
 {
     HZActionSheet *sheet = [[HZActionSheet alloc] initWithTitle:@"选择照片" delegate:self cancelButtonTitle:@"取消" destructiveButtonIndexSet:nil otherButtonTitles:@[@"相册", @"相机"]];
     sheet.tag = HZActionSheetTagNormal;
+    sheet.titleColor = [UIColor purpleColor];
     [sheet showInView:self.view];
 }
 - (IBAction)multiLineSheetAction:(id)sender
@@ -47,6 +48,7 @@ typedef NS_ENUM(NSInteger, HZActionSheetTag) {
     
     HZActionSheet *sheet = [[HZActionSheet alloc] initWithTitle:@"选择照片" delegate:self cancelButtonTitle:@"取消" destructiveButtonIndexSet:nil otherButtonTitles:array];
     sheet.tag = HZActionSheetTagMultiLine;
+    sheet.titleColor = [UIColor purpleColor];
     [sheet showInView:self.view];
 }
 - (IBAction)redSheetAction:(id)sender

@@ -6,7 +6,7 @@ HZActionSheet
 ###效果图
 
 
-{% img screenshot.gif %}
+![image](https://github.com/HistoryZhang/HZActionSheet/blob/master/screenshot.gif)
 
 
 ###使用方法

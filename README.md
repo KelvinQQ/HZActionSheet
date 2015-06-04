@@ -6,7 +6,7 @@ HZActionSheet
 ###效果图
 
 
-{% img /screenshot.gif %}
+{% img screenshot.gif %}
 
 
 ###使用方法

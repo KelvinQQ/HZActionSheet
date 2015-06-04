@@ -2,13 +2,13 @@
 Pod::Spec.new do |s|
 
   s.name         = "HZActionSheet"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "ActionSheet like WeiXin"
   s.homepage     = "http://github.com/HistoryZhang/HZActionSheet"
   s.license      = "MIT"
   s.author       = { "HistoryZhang" => "history_zq@foxmail.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/HistoryZhang/HZActionSheet.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/HistoryZhang/HZActionSheet.git", :tag => "1.0.1" }
   s.source_files  = "HZActionSheet/HZActionSheet/*.{h,m}"
   s.requires_arc = true
   s.dependency 'Masonry'

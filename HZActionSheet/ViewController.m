@@ -68,6 +68,8 @@ typedef NS_ENUM(NSInteger, HZActionSheetTag) {
 #pragma mark - ActionSheet Delegate
 - (void)actionSheet:(HZActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"你点击了 %@", @(buttonIndex));
+    if (actionSheet.cancelButtonIndex != buttonIndex) {
+        NSLog(@"你点击了 %@", @(buttonIndex));
+    }
 }
 @end

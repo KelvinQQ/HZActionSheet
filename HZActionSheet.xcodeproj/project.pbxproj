@@ -15,7 +15,7 @@
 		0360BF531B19687500C6FE31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0360BF511B19687500C6FE31 /* LaunchScreen.xib */; };
 		0360BF5F1B19687500C6FE31 /* HZActionSheetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0360BF5E1B19687500C6FE31 /* HZActionSheetTests.m */; };
 		0360BF721B199A5E00C6FE31 /* HZActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0360BF711B199A5E00C6FE31 /* HZActionSheet.m */; };
-		5F25E9430948295E436FF975 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F482AD1A2E592ADEC40C69BB /* libPods.a */; };
+		E140F62DF5D7E33E6DEAF47C /* libPods-HZActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C76F50A79AAE719195322132 /* libPods-HZActionSheet.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +44,9 @@
 		0360BF5E1B19687500C6FE31 /* HZActionSheetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZActionSheetTests.m; sourceTree = "<group>"; };
 		0360BF701B199A5E00C6FE31 /* HZActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZActionSheet.h; sourceTree = "<group>"; };
 		0360BF711B199A5E00C6FE31 /* HZActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZActionSheet.m; sourceTree = "<group>"; };
-		3EA4591EFEDC5C38772FED07 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		5B71F3533F50187FC67F72F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F482AD1A2E592ADEC40C69BB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1369F175B0EB9BFCFF5D34AB /* Pods-HZActionSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZActionSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HZActionSheet/Pods-HZActionSheet.debug.xcconfig"; sourceTree = "<group>"; };
+		C76F50A79AAE719195322132 /* libPods-HZActionSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZActionSheet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E101D1460817B817D90EA595 /* Pods-HZActionSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZActionSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-HZActionSheet/Pods-HZActionSheet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F25E9430948295E436FF975 /* libPods.a in Frameworks */,
+				E140F62DF5D7E33E6DEAF47C /* libPods-HZActionSheet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +74,8 @@
 				0360BF411B19687500C6FE31 /* HZActionSheet */,
 				0360BF5B1B19687500C6FE31 /* HZActionSheetTests */,
 				0360BF401B19687500C6FE31 /* Products */,
-				B93D1FB6AE7C0FEBB964AB70 /* Pods */,
-				5D667E5361282755F00F0B15 /* Frameworks */,
+				9837D756EE6932919AA880F7 /* Pods */,
+				FD27626846E47385FE7FED67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,21 +139,21 @@
 			path = HZActionSheet;
 			sourceTree = "<group>";
 		};
-		5D667E5361282755F00F0B15 /* Frameworks */ = {
+		9837D756EE6932919AA880F7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F482AD1A2E592ADEC40C69BB /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B93D1FB6AE7C0FEBB964AB70 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3EA4591EFEDC5C38772FED07 /* Pods.debug.xcconfig */,
-				5B71F3533F50187FC67F72F3 /* Pods.release.xcconfig */,
+				1369F175B0EB9BFCFF5D34AB /* Pods-HZActionSheet.debug.xcconfig */,
+				E101D1460817B817D90EA595 /* Pods-HZActionSheet.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD27626846E47385FE7FED67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C76F50A79AAE719195322132 /* libPods-HZActionSheet.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0360BF621B19687500C6FE31 /* Build configuration list for PBXNativeTarget "HZActionSheet" */;
 			buildPhases = (
-				C9BDE3EFE1DAB5B777B8B9B1 /* Check Pods Manifest.lock */,
+				647A682868BCA6B9681E5EA7 /* [CP] Check Pods Manifest.lock */,
 				0360BF3B1B19687500C6FE31 /* Sources */,
 				0360BF3C1B19687500C6FE31 /* Frameworks */,
 				0360BF3D1B19687500C6FE31 /* Resources */,
-				EBAA412E3570F7D4DA5B5B16 /* Copy Pods Resources */,
+				740384161C26F4DD06F30F79 /* [CP] Embed Pods Frameworks */,
+				74E2F6684B48E206CB9A9901 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,34 +255,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C9BDE3EFE1DAB5B777B8B9B1 /* Check Pods Manifest.lock */ = {
+		647A682868BCA6B9681E5EA7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EBAA412E3570F7D4DA5B5B16 /* Copy Pods Resources */ = {
+		740384161C26F4DD06F30F79 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HZActionSheet/Pods-HZActionSheet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74E2F6684B48E206CB9A9901 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HZActionSheet/Pods-HZActionSheet-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -418,7 +434,7 @@
 		};
 		0360BF631B19687500C6FE31 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EA4591EFEDC5C38772FED07 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1369F175B0EB9BFCFF5D34AB /* Pods-HZActionSheet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HZActionSheet/Info.plist;
@@ -429,7 +445,7 @@
 		};
 		0360BF641B19687500C6FE31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B71F3533F50187FC67F72F3 /* Pods.release.xcconfig */;
+			baseConfigurationReference = E101D1460817B817D90EA595 /* Pods-HZActionSheet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HZActionSheet/Info.plist;

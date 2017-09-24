@@ -242,4 +242,13 @@ const CGFloat kHZFontSize = 18.f;
         [_delegate actionSheet:self clickedButtonAtIndex:indexPath.row];
     }
 }
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return nil;
+}
+- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return nil;
+}
 @end

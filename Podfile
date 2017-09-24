@@ -1,3 +1,5 @@
 platform :ios, "7.0"
  
-pod 'Masonry'
+target "HZActionSheet" do
+	pod 'Masonry'
+end
